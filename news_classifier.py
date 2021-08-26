@@ -185,7 +185,7 @@ def train(model, train_data_loader, val_data_loader=None, epochs=5, evaluation=F
             optimizer.step()
             scheduler.step()
 
-            # Print loss values and time every 20 batches
+            # Print loss values and time every 100 batches
             if step % 100 == 0 and step > 0 or step == len(train_data_loader) - 1:
                 elapsed_time = time.time() - initial_batch_time
                 print(f'{epoch + 1: ^7} | {step: ^7} | {batch_loss / batch_counts: ^15.5f} | {"-": ^17} | {"-": ^21} | {elapsed_time: ^14.2f}')
